@@ -1215,7 +1215,7 @@ export const ApplicationsTable: React.FC = () => {
           message={
             <span>
               <Trans i18nKey="dialog.message.discardAssessment">
-                The assessment(s) for{" "}
+                The assessment(s) for
                 <strong>{assessmentToDiscard?.name}</strong> discarded. Do you
                 wish to continue?
               </Trans>
@@ -1366,30 +1366,25 @@ export const ApplicationsTable: React.FC = () => {
         onClose={() => setIsDownloadModalOpen(false)}
       >
         <FormGroup label="Select Format" fieldId="format-select">
-          {" "}
           <div>
-            {" "}
             <Button
               variant={selectedFormat === "json" ? "primary" : "secondary"}
               onClick={() => setSelectedFormat("json")}
             >
-              {" "}
-              {<CodeIcon />} JSON{" "}
-            </Button>{" "}
+              {<CodeIcon />} JSON
+            </Button>
             <Button
               variant={selectedFormat === "yaml" ? "primary" : "secondary"}
               onClick={() => setSelectedFormat("yaml")}
             >
-              {" "}
-              {<CodeIcon />} YAML{" "}
-            </Button>{" "}
-          </div>{" "}
-          <p>Selected Format: {selectedFormat}</p>{" "}
-        </FormGroup>{" "}
+              {<CodeIcon />} YAML
+            </Button>
+          </div>
+          <p>Selected Format: {selectedFormat}</p>
+        </FormGroup>
         <Button variant="primary" onClick={handleDownload}>
-          {" "}
-          {t("actions.download")}{" "}
-        </Button>{" "}
+          {t("actions.download")}
+        </Button>
       </Modal>
     </ConditionalRender>
   );
